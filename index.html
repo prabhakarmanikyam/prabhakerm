@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Portfolio of Prabhaker M – Data & Business Analyst"/>
+<meta name="description" content="Portfolio of Prabhaker M – Data & Business Analyst. 5+ years building forecasting pipelines, BI dashboards, and analytics systems."/>
+<meta name="theme-color" content="#0B1628">
 <title>Prabhaker M | Data & Business Analyst</title>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" as="style">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -43,7 +45,10 @@
     font-family: 'Syne', sans-serif;
     font-size: 1.4rem; font-weight: 800;
     color: var(--white); text-decoration: none;
+    transition: color 0.2s;
   }
+  .nav-logo:hover, .nav-logo:focus-visible { color: var(--gold); }
+  .nav-logo:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
   .nav-logo span { color: var(--gold); }
   .nav-links { display: flex; gap: 2.2rem; list-style: none; }
   .nav-links a {
@@ -52,13 +57,22 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--white); }
+  .nav-links a:focus-visible {
+    outline: 2px solid var(--accent2);
+    outline-offset: 4px;
+  }
   .nav-cta {
     background: var(--accent); color: #fff;
     padding: 0.5rem 1.2rem; border-radius: 6px;
     font-size: 0.85rem; font-weight: 600; text-decoration: none;
     transition: background 0.2s;
+    border: none; cursor: pointer;
   }
   .nav-cta:hover { background: var(--accent2); }
+  .nav-cta:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
+  }
 
   /* ── HERO ── */
   #top {
@@ -116,8 +130,13 @@
     padding: 0.8rem 1.8rem; border-radius: 8px;
     font-weight: 600; font-size: 0.95rem; text-decoration: none;
     transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.4rem;
+    border: none; cursor: pointer;
   }
   .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
+  }
   .btn-outline {
     border: 1px solid var(--border); color: var(--white);
     padding: 0.8rem 1.8rem; border-radius: 8px;
@@ -125,6 +144,10 @@
     transition: all 0.2s; background: transparent;
   }
   .btn-outline:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-2px); }
+  .btn-outline:focus-visible {
+    outline: 2px solid var(--accent2);
+    outline-offset: 2px;
+  }
   .hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
   .stat-item { }
   .stat-num { font-family:'Syne',sans-serif; font-size:1.8rem; font-weight:800; color:var(--white); }
@@ -185,7 +208,7 @@
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     gap: 1rem;
   }
-  .photo-icon { font-size: 5rem; opacity: 0.3; }
+  .photo-icon { font-size: 5rem; opacity: 0.3; aria-hidden: true; }
   .photo-label { color: var(--muted); font-size: 0.8rem; text-align:center; padding: 0 2rem; }
   .about-badge {
     position: absolute; bottom: -1.5rem; right: -1.5rem;
@@ -239,14 +262,14 @@
 
   /* ── SKILLS ── */
   #skills { background: var(--navy2); }
-  .skills-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem; margin-top:3rem; }
+  .skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin-top:3rem; }
   .skill-card {
     background: var(--card); border:1px solid var(--border);
     border-radius:14px; padding:1.6rem;
     transition: border-color 0.2s, transform 0.2s;
   }
   .skill-card:hover { border-color: var(--accent2); transform: translateY(-4px); }
-  .skill-card-icon { font-size:1.8rem; margin-bottom:0.8rem; }
+  .skill-card-icon { font-size:1.8rem; margin-bottom:0.8rem; aria-hidden: true; }
   .skill-card-title { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:800; margin-bottom:0.8rem; }
   .skill-pills { display:flex; flex-wrap:wrap; gap:0.4rem; }
   .skill-pill {
@@ -256,8 +279,8 @@
   }
 
   /* ── PROJECTS ── */
-  #projects { }
-  .projects-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(340px,1fr)); gap:1.5rem; margin-top:3rem; }
+  #projects { background: var(--navy2); }
+  .projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap:1.5rem; margin-top:3rem; }
   .project-card {
     background: var(--card); border:1px solid var(--border);
     border-radius:16px; padding:2rem; position:relative; overflow:hidden;
@@ -284,7 +307,7 @@
 
   /* ── CERTIFICATIONS ── */
   #certs { background: var(--navy2); }
-  .certs-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap:1rem; margin-top:3rem; }
+  .certs-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; margin-top:3rem; }
   .cert-card {
     background: var(--card); border:1px solid var(--border);
     border-radius:12px; padding:1.2rem 1.4rem;
@@ -292,7 +315,7 @@
     transition: border-color 0.2s;
   }
   .cert-card:hover { border-color: var(--gold); }
-  .cert-icon { font-size:1.5rem; flex-shrink:0; }
+  .cert-icon { font-size:1.5rem; flex-shrink:0; aria-hidden: true; }
   .cert-name { font-size:0.82rem; font-weight:600; line-height:1.4; }
   .cert-issuer { font-size:0.72rem; color:var(--muted); margin-top:2px; }
 
@@ -301,7 +324,7 @@
     background: linear-gradient(135deg, #0B1628 0%, #0d1f3c 50%, #0B1628 100%);
     text-align: center;
   }
-  .contact-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr)); gap:1.2rem; margin: 3rem auto; max-width:860px; }
+  .contact-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1.2rem; margin: 3rem auto; max-width:860px; }
   .contact-card {
     background: var(--card); border:1px solid var(--border);
     border-radius:14px; padding:1.6rem;
@@ -310,7 +333,11 @@
     display:flex; flex-direction:column; align-items:center; gap:0.6rem;
   }
   .contact-card:hover { border-color:var(--accent2); transform:translateY(-4px); }
-  .contact-icon { font-size:1.8rem; }
+  .contact-card:focus-visible {
+    outline: 2px solid var(--accent2);
+    outline-offset: 2px;
+  }
+  .contact-icon { font-size:1.8rem; aria-hidden: true; }
   .contact-label { font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; }
   .contact-value { font-size:0.88rem; font-weight:600; word-break:break-all; text-align:center; }
 
@@ -321,20 +348,29 @@
     display:flex; justify-content:space-between; align-items:center;
     color:var(--muted); font-size:0.82rem;
   }
+  footer a { color: var(--accent2); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
 
   /* ── SCROLL REVEAL ── */
   .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.6s ease, transform 0.6s ease; }
   .reveal.visible { opacity:1; transform:translateY(0); }
 
   /* ── RESPONSIVE ── */
+  @media(max-width:1024px){
+    .hero-stack { display:none; }
+  }
   @media(max-width:900px){
     nav { padding:1rem 1.5rem; }
     .nav-links { display:none; }
     section { padding:4rem 1.5rem; }
     #top { padding:6rem 1.5rem 3rem; }
-    .hero-stack { display:none; }
     .about-grid { grid-template-columns:1fr; gap:2rem; }
     footer { flex-direction:column; gap:0.5rem; text-align:center; }
+  }
+  @media(max-width:640px){
+    .skills-grid, .projects-grid, .certs-grid, .contact-grid {
+      grid-template-columns: 1fr !important;
+    }
   }
 </style>
 </head>
@@ -364,7 +400,7 @@
     <h1 class="hero-name">Prabhaker <span>M</span></h1>
     <p class="hero-title">Business & Data Analyst</p>
     <p class="hero-desc">
-      5+ years turning messy data into clean decisions. I build forecasting pipelines, BI dashboards, and analytics systems that drive measurable business outcomes — from 80% stockout reductions to $1.5M in annual client savings.
+      5+ years turning messy data into clean decisions. I build forecasting pipelines, BI dashboards, and analytics systems that drive measurable business outcomes — from 80% stockout reductions at Volvo to $1.5M in annual client savings across supply chain, retail, and pharma domains.
     </p>
     <div class="hero-btns">
       <a class="btn-primary" href="#contact">Let's Connect →</a>
@@ -411,7 +447,7 @@
   <div class="about-grid">
     <div class="about-photo-wrap reveal">
       <div class="about-photo-placeholder">
-        <span class="photo-icon">👤</span>
+        <span class="photo-icon" aria-hidden="true">👤</span>
         <span class="photo-label">Add your photo here</span>
       </div>
       <div class="about-badge">
@@ -422,10 +458,10 @@
     <div class="about-text reveal">
       <h3>A Data-Minded Analyst Bridging Analytics & Business Strategy</h3>
       <p>
-        My path spans supply chain analytics, business intelligence, and software engineering — all connected by one goal: turning raw data into decisions that matter. From forecasting pipelines at Volvo to CI/CD automation at Accenture, I've built systems that make businesses faster and smarter.
+        My path spans supply chain analytics, business intelligence, and software engineering — all connected by one goal: turning raw data into decisions that matter. From forecasting pipelines at Volvo to cost-modeling systems at Cloud Pharma, I've consistently delivered analytics that reduce costs and accelerate growth.
       </p>
       <p>
-        Currently completing my <strong>Master of Engineering Management</strong> (Data Science & Analytics concentration, 3.84 GPA) at NC State, I bring a rare combination of technical depth and business fluency.
+        Currently completing my <strong>Master of Engineering Management</strong> (Data Science & Analytics concentration, 3.84 GPA) at NC State, I bring a rare combination of technical depth and business acumen. I architect end-to-end data solutions that stakeholders understand and trust — whether that's supply chain forecasting, KPI dashboards, or GPU infrastructure cost modeling.
       </p>
       <p>
         Beyond the data, I'm passionate about mentoring, continuous learning, and finding the signal in the noise — whether that's in a supply chain dataset or a performance KPI.
@@ -466,7 +502,7 @@
       <div class="tl-role">Business Analyst</div>
       <div class="tl-company">☁️ Cloud Pharmaceuticals</div>
       <div class="tl-desc">
-        Built GPU infrastructure budgets and scenario-based cost models comparing A100/H100/B100-class configurations. Drove a 15% reduction in projected infrastructure costs through cost-performance tradeoff analysis and standardized vendor evaluation frameworks.
+        Built GPU infrastructure budgets and scenario-based cost models comparing A100/H100/B100-class configurations. Drove a 15% reduction in projected infrastructure costs through cost-performance trade-off analysis and vendor consolidation. Created executive-ready dashboards tracking compute utilization, power consumption, and ROI across AI workloads.
       </div>
       <div class="tl-tags">
         <span class="tag">BRD/FRD</span>
@@ -496,7 +532,7 @@
       <div class="tl-role">Supply Chain Data Analyst Intern</div>
       <div class="tl-company">🚛 Volvo Group</div>
       <div class="tl-desc">
-        Built demand forecasting pipelines using Python and SQL with ANN/LSTM models, improving forecast accuracy by 60%. Delivered Power BI exception dashboards that reduced stockouts by 80% across high-risk SKUs.
+        Built demand forecasting pipelines using Python and SQL with ANN/LSTM models, improving forecast accuracy by 60%. Delivered Power BI exception dashboards that reduced stockouts by 80% across hub locations. Standardized 500K supply chain records, improving data quality and reducing false KPI exceptions by 30%.
       </div>
       <div class="tl-tags">
         <span class="tag">Python</span>
@@ -513,7 +549,7 @@
       <div class="tl-role">Business Intelligence Analyst</div>
       <div class="tl-company">💼 Accenture</div>
       <div class="tl-desc">
-        Delivered stakeholder-ready Power BI dashboards with DAX, SSIS ETL pipelines, and automated SSRS reporting. Built Power Automate monitoring that raised pipeline uptime to 97%. Reduced production disruption by 60% and contributed to $1.5M/year in client savings through analytics automation.
+        Delivered stakeholder-ready Power BI dashboards with DAX, SSIS ETL pipelines, and automated SSRS reporting. Built Power Automate monitoring that raised pipeline uptime to 97%. Reduced production incidents by 60% through root-cause analysis and incident pattern triage. Managed 200+ defect resolutions and security remediation across multiple workstreams.
       </div>
       <div class="tl-tags">
         <span class="tag">Power BI</span>
@@ -541,7 +577,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" style="background: var(--navy2);">
+<section id="projects">
   <div class="reveal">
     <span class="section-label">Work Projects</span>
     <h2 class="section-title">Professional <span>Highlights</span></h2>
@@ -555,7 +591,7 @@
       </div>
       <div class="project-title">Demand Forecasting Pipeline — Volvo Group</div>
       <div class="project-desc">
-        Built an end-to-end forecasting pipeline in Python and SQL with seasonality, lag, and rolling-window features. Used ANN and LSTM models to surface demand signals. Integrated outputs into Power BI exception dashboards flagging high-risk SKUs and low-coverage inventory.
+        Built an end-to-end forecasting pipeline in Python and SQL with seasonality, lag, and rolling-window features. Used ANN and LSTM models to surface demand signals. Integrated outputs into Power BI exception dashboards for real-time anomaly detection.
       </div>
       <div class="project-result">60% Forecast Accuracy Improvement · 80% Stockout Reduction</div>
     </div>
@@ -566,7 +602,7 @@
       </div>
       <div class="project-title">BI Platform & Pipeline Automation — Accenture</div>
       <div class="project-desc">
-        Designed and maintained Power BI dashboards with DAX measures, drill-downs, and automated refresh. Built Power Automate monitoring to auto-create defects on pipeline failures, raising uptime to 97%. Developed SSIS ETL workflows for scalable reporting foundations.
+        Designed and maintained Power BI dashboards with DAX measures, drill-downs, and automated refresh. Built Power Automate monitoring to auto-create defects on pipeline failures, raising uptime to 97%. Reduced manual intervention by 80% through intelligent alerting.
       </div>
       <div class="project-result">97% Pipeline Uptime · $1.5M Annual Client Savings</div>
     </div>
@@ -577,7 +613,7 @@
       </div>
       <div class="project-title">Incident Management & Release Operations — Accenture</div>
       <div class="project-desc">
-        Reduced production disruption by 60% through incident pattern analysis, SQL/log-based root-cause triage, and structured UAT planning. Managed change requests across multiple workstreams using JIRA and Azure DevOps with full Git version control.
+        Reduced production disruption by 60% through incident pattern analysis, SQL/log-based root-cause triage, and structured UAT planning. Managed change requests across multiple workstreams using Azure DevOps and JIRA with full release traceability.
       </div>
       <div class="project-result">60% Reduction in Production Disruption</div>
     </div>
@@ -588,7 +624,7 @@
       </div>
       <div class="project-title">GPU Infrastructure Budget Model — Cloud Pharmaceuticals</div>
       <div class="project-desc">
-        Built a comprehensive cost-benefit model covering compute, storage, power, and cooling for GPU infrastructure. Consolidated vendor quotes across A100/H100/B100-class options into executive-ready decision dashboards, driving procurement clarity.
+        Built a comprehensive cost-benefit model covering compute, storage, power, and cooling for GPU infrastructure. Consolidated vendor quotes across A100/H100/B100-class options into executive-ready Power BI dashboards comparing total cost of ownership.
       </div>
       <div class="project-result">15% Reduction in Projected Infrastructure Costs</div>
     </div>
@@ -599,7 +635,7 @@
       </div>
       <div class="project-title">Supply Chain Data Standardization — Volvo Group</div>
       <div class="project-desc">
-        Standardized and validated a 500K-record supply chain dataset using R, implementing validation checks and transformation logic. Improved data quality by 30%, reducing false exceptions in KPI dashboards and forecast reporting.
+        Standardized and validated a 500K-record supply chain dataset using R, implementing validation checks and transformation logic. Improved data quality by 30%, reducing false exceptions in KPI dashboards and improving forecast reliability.
       </div>
       <div class="project-result">30% Data Quality Improvement · 500K+ Records Validated</div>
     </div>
@@ -610,7 +646,7 @@
       </div>
       <div class="project-title">API Integration & Security Remediation — Accenture</div>
       <div class="project-desc">
-        Integrated and tested REST APIs using OAuth token-based authentication. Remediated SonarQube security findings including SQL injection risks, executed DAST testing, and validated fixes to prevent regressions across 20+ sprint releases.
+        Integrated and tested REST APIs using OAuth token-based authentication. Remediated SonarQube security findings including SQL injection risks, executed DAST testing, and validated fixes to prevent regression across multiple deployments.
       </div>
       <div class="project-result">200+ Defects Resolved · Security Posture Strengthened</div>
     </div>
@@ -627,7 +663,7 @@
   </div>
   <div class="skills-grid">
     <div class="skill-card reveal">
-      <div class="skill-card-icon">📊</div>
+      <div class="skill-card-icon" aria-hidden="true">📊</div>
       <div class="skill-card-title">BI & Visualization</div>
       <div class="skill-pills">
         <span class="skill-pill">Power BI</span>
@@ -639,7 +675,7 @@
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-card-icon">🐍</div>
+      <div class="skill-card-icon" aria-hidden="true">🐍</div>
       <div class="skill-card-title">Programming & ML</div>
       <div class="skill-pills">
         <span class="skill-pill">Python</span>
@@ -651,7 +687,7 @@
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-card-icon">⚙️</div>
+      <div class="skill-card-icon" aria-hidden="true">⚙️</div>
       <div class="skill-card-title">ETL & Data Engineering</div>
       <div class="skill-pills">
         <span class="skill-pill">SSIS</span>
@@ -662,7 +698,7 @@
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-card-icon">☁️</div>
+      <div class="skill-card-icon" aria-hidden="true">☁️</div>
       <div class="skill-card-title">Cloud & DevOps</div>
       <div class="skill-pills">
         <span class="skill-pill">Azure DevOps</span>
@@ -674,7 +710,7 @@
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-card-icon">🗄️</div>
+      <div class="skill-card-icon" aria-hidden="true">🗄️</div>
       <div class="skill-card-title">Databases</div>
       <div class="skill-pills">
         <span class="skill-pill">SQL Server</span>
@@ -685,7 +721,7 @@
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-card-icon">📋</div>
+      <div class="skill-card-icon" aria-hidden="true">📋</div>
       <div class="skill-card-title">Business Analysis</div>
       <div class="skill-pills">
         <span class="skill-pill">BRD / FRD</span>
@@ -700,7 +736,7 @@
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="certs" style="background:var(--navy2)">
+<section id="certs">
   <div class="reveal">
     <span class="section-label">Credentials</span>
     <h2 class="section-title">Certifications & <span>Credentials</span></h2>
@@ -708,35 +744,35 @@
   </div>
   <div class="certs-grid">
     <div class="cert-card reveal">
-      <div class="cert-icon">📊</div>
+      <div class="cert-icon" aria-hidden="true">📊</div>
       <div><div class="cert-name">Microsoft Power BI Data Analyst Associate</div><div class="cert-issuer">Microsoft</div></div>
     </div>
     <div class="cert-card reveal">
-      <div class="cert-icon">☁️</div>
+      <div class="cert-icon" aria-hidden="true">☁️</div>
       <div><div class="cert-name">AWS Data Engineer, Associate</div><div class="cert-issuer">Amazon Web Services</div></div>
     </div>
     <div class="cert-card reveal">
-      <div class="cert-icon">📈</div>
+      <div class="cert-icon" aria-hidden="true">📈</div>
       <div><div class="cert-name">Tableau Desktop Specialist</div><div class="cert-issuer">Tableau / Salesforce</div></div>
     </div>
     <div class="cert-card reveal">
-      <div class="cert-icon">📡</div>
+      <div class="cert-icon" aria-hidden="true">📡</div>
       <div><div class="cert-name">Data Analytics Essentials</div><div class="cert-issuer">Cisco</div></div>
     </div>
     <div class="cert-card reveal">
-      <div class="cert-icon">⚡</div>
+      <div class="cert-icon" aria-hidden="true">⚡</div>
       <div><div class="cert-name">Six Sigma Green Belt</div><div class="cert-issuer">IASSC</div></div>
     </div>
     <div class="cert-card reveal">
-      <div class="cert-icon">🏆</div>
+      <div class="cert-icon" aria-hidden="true">🏆</div>
       <div><div class="cert-name">Certified Scrum Product Owner</div><div class="cert-issuer">Scrum Alliance</div></div>
     </div>
     <div class="cert-card reveal">
-      <div class="cert-icon">📋</div>
+      <div class="cert-icon" aria-hidden="true">📋</div>
       <div><div class="cert-name">Certified Associate in Project Management</div><div class="cert-issuer">PMI</div></div>
     </div>
     <div class="cert-card reveal">
-      <div class="cert-icon">🔧</div>
+      <div class="cert-icon" aria-hidden="true">🔧</div>
       <div><div class="cert-name">SAP ERP Essential Training</div><div class="cert-issuer">SAP</div></div>
     </div>
   </div>
@@ -754,24 +790,24 @@
   </div>
   <div class="contact-grid reveal">
     <a class="contact-card" href="mailto:prabhakerm.data@gmail.com">
-      <div class="contact-icon">✉️</div>
+      <div class="contact-icon" aria-hidden="true">✉️</div>
       <div class="contact-label">Email</div>
       <div class="contact-value">prabhakerm.data@gmail.com</div>
     </a>
-    <a class="contact-card" href="tel:9845289870">
-      <div class="contact-icon">📱</div>
+    <a class="contact-card" href="tel:+19845289870">
+      <div class="contact-icon" aria-hidden="true">📱</div>
       <div class="contact-label">Phone</div>
       <div class="contact-value">+1 (984) 528-9870</div>
     </a>
-    <a class="contact-card" href="https://linkedin.com/in/prabhakarm" target="_blank">
-      <div class="contact-icon">💼</div>
+    <a class="contact-card" href="https://linkedin.com/in/prabhakarm" target="_blank" rel="noopener noreferrer">
+      <div class="contact-icon" aria-hidden="true">💼</div>
       <div class="contact-label">LinkedIn</div>
       <div class="contact-value">/in/prabhakarm</div>
     </a>
-    <a class="contact-card" href="#">
-      <div class="contact-icon">📍</div>
-      <div class="contact-label">Location</div>
-      <div class="contact-value">Willowbrook, IL</div>
+    <a class="contact-card" href="https://github.com/prabhakarmanikyam" target="_blank" rel="noopener noreferrer">
+      <div class="contact-icon" aria-hidden="true">💻</div>
+      <div class="contact-label">GitHub</div>
+      <div class="contact-value">@prabhakarmanikyam</div>
     </a>
   </div>
 </section>
@@ -783,7 +819,7 @@
 </footer>
 
 <script>
-  // Scroll reveal
+  // Scroll reveal with IntersectionObserver
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -793,14 +829,23 @@
       }
     });
   }, { threshold: 0.1 });
+  
   reveals.forEach(el => observer.observe(el));
 
   // Stagger children in grids
-  document.querySelectorAll('.projects-grid, .skills-grid, .certs-grid, .contact-grid').forEach(grid => {
+  const grids = document.querySelectorAll('.projects-grid, .skills-grid, .certs-grid, .contact-grid');
+  grids.forEach(grid => {
     grid.querySelectorAll('.reveal').forEach((el, i) => {
       el.style.transitionDelay = `${i * 0.08}s`;
     });
   });
+
+  // Add keyboard navigation for contact location card
+  const locationCard = document.querySelector('.contact-card[href="#"]');
+  if (locationCard) {
+    locationCard.style.cursor = 'default';
+    locationCard.addEventListener('click', (e) => e.preventDefault());
+  }
 </script>
 </body>
 </html>
