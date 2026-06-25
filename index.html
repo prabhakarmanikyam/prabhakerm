@@ -6,8 +6,8 @@
 <meta name="description" content="Portfolio of Prabhaker M – Data & Business Analyst. 5+ years building forecasting pipelines, BI dashboards, and analytics systems."/>
 <meta name="theme-color" content="#0B1628">
 <title>Prabhaker Manikyam | Data & Business Analyst</title>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" as="style">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
   :root {
     --navy: #0B1628;
@@ -23,13 +23,14 @@
     --border: rgba(255,255,255,0.08);
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     background: var(--navy);
     color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
+    letter-spacing: 0.3px;
   }
 
   /* ── NAV ── */
@@ -42,8 +43,8 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-logo {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.4rem; font-weight: 800;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.4rem; font-weight: 700;
     color: var(--white); text-decoration: none;
     transition: color 0.2s;
   }
@@ -107,11 +108,11 @@
   }
   .hero-eyebrow::before { content:''; width:6px; height:6px; border-radius:50%; background: var(--accent2); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
-  .hero-hi { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:var(--muted); margin-bottom:0.4rem; }
+  .hero-hi { font-family:'Space Mono',monospace; font-size:1.1rem; font-weight:700; color:var(--muted); margin-bottom:0.4rem; }
   .hero-name {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(3rem, 6vw, 5.2rem);
-    font-weight: 800; line-height: 1.05;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700; line-height: 1.1;
     letter-spacing: -0.02em;
     margin-bottom: 0.6rem;
   }
@@ -150,7 +151,7 @@
   }
   .hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
   .stat-item { }
-  .stat-num { font-family:'Syne',sans-serif; font-size:1.8rem; font-weight:800; color:var(--white); }
+  .stat-num { font-family:'Space Mono',monospace; font-size:1.8rem; font-weight:700; color:var(--white); }
   .stat-num span { color:var(--gold); }
   .stat-label { font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:2px; }
 
@@ -186,9 +187,9 @@
     margin-bottom: 0.6rem; display: block;
   }
   .section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    font-weight: 800; line-height: 1.1;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700; line-height: 1.2;
     margin-bottom: 1rem;
   }
   .section-title span { color: var(--gold); }
@@ -214,13 +215,13 @@
     position: absolute; bottom: -1.5rem; right: -1.5rem;
     background: var(--gold); color: #0B1628;
     padding: 1rem 1.4rem; border-radius: 12px;
-    font-weight: 800; text-align: center;
+    font-weight: 700; text-align: center;
   }
-  .about-badge .num { font-family:'Syne',sans-serif; font-size:2rem; display:block; line-height:1; }
+  .about-badge .num { font-family:'Space Mono',monospace; font-size:2rem; display:block; line-height:1; }
   .about-badge .lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
   .about-text h3 {
-    font-family: 'Syne', sans-serif; font-size: 1.5rem;
-    font-weight: 800; margin-bottom: 1rem;
+    font-family: 'Space Mono', monospace; font-size: 1.5rem;
+    font-weight: 700; margin-bottom: 1rem;
   }
   .about-text p { color: var(--muted); line-height: 1.8; margin-bottom: 1.2rem; }
   .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
@@ -228,7 +229,7 @@
     background: var(--card); border: 1px solid var(--border);
     border-radius: 10px; padding: 1.2rem;
   }
-  .highlight-card .num { font-family:'Syne',sans-serif; font-size:1.6rem; font-weight:800; color: var(--gold); }
+  .highlight-card .num { font-family:'Space Mono',monospace; font-size:1.6rem; font-weight:700; color: var(--gold); }
   .highlight-card .lbl { font-size:0.75rem; color:var(--muted); margin-top:2px; }
 
   /* ── JOURNEY ── */
@@ -249,7 +250,7 @@
   }
   .tl-item.edu::before { background: var(--gold); box-shadow: 0 0 0 4px rgba(245,158,11,0.2); }
   .tl-date { font-size:0.78rem; color:var(--accent2); font-weight:600; letter-spacing:0.04em; margin-bottom:0.3rem; }
-  .tl-role { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:800; margin-bottom:0.15rem; }
+  .tl-role { font-family:'Space Mono',monospace; font-size:1.1rem; font-weight:700; margin-bottom:0.15rem; }
   .tl-company { font-size:0.9rem; color:var(--muted); margin-bottom:0.6rem; }
   .tl-desc { color:var(--muted); font-size:0.9rem; line-height:1.7; max-width:600px; }
   .tl-tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.8rem; }
@@ -270,7 +271,7 @@
   }
   .skill-card:hover { border-color: var(--accent2); transform: translateY(-4px); }
   .skill-card-icon { font-size:1.8rem; margin-bottom:0.8rem; aria-hidden: true; }
-  .skill-card-title { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:800; margin-bottom:0.8rem; }
+  .skill-card-title { font-family:'Space Mono',monospace; font-size:0.95rem; font-weight:700; margin-bottom:0.8rem; }
   .skill-pills { display:flex; flex-wrap:wrap; gap:0.4rem; }
   .skill-pill {
     background:rgba(255,255,255,0.06); color:var(--white);
@@ -295,7 +296,7 @@
   .project-card:hover { border-color: var(--accent2); transform: translateY(-4px); }
   .project-card:hover::before { opacity:1; }
   .project-tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:1rem; }
-  .project-title { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:800; margin-bottom:0.7rem; }
+  .project-title { font-family:'Space Mono',monospace; font-size:1.1rem; font-weight:700; margin-bottom:0.7rem; }
   .project-desc { color:var(--muted); font-size:0.88rem; line-height:1.7; flex:1; }
   .project-result {
     margin-top:1.2rem; padding-top:1rem;
@@ -400,7 +401,7 @@
     <h1 class="hero-name">Prabhaker <span>M</span></h1>
     <p class="hero-title">Business & Data Analyst</p>
     <p class="hero-desc">
-      5+ years turning messy data into clean decisions. I build forecasting pipelines, BI dashboards, and analytics systems that drive measurable business outcomes — from 80% stockout reductions at Volvo to $1.5M in annual client savings across supply chain, retail, and pharma domains.
+      5+ years turning messy data into clean decisions. I build forecasting pipelines, BI dashboards, and analytics systems that drive measurable business outcomes — from 80% stockout reductions at [...]
     </p>
     <div class="hero-btns">
       <a class="btn-primary" href="#contact">Let's Connect →</a>
@@ -458,10 +459,10 @@
     <div class="about-text reveal">
       <h3>A Data-Minded Analyst Bridging Analytics & Business Strategy</h3>
       <p>
-        My path spans supply chain analytics, business intelligence, and software engineering — all connected by one goal: turning raw data into decisions that matter. From forecasting pipelines at Volvo to cost-modeling systems at Cloud Pharma, I've consistently delivered analytics that reduce costs and accelerate growth.
+        My path spans supply chain analytics, business intelligence, and software engineering — all connected by one goal: turning raw data into decisions that matter. From forecasting pipelines at [...]
       </p>
       <p>
-        Currently completing my <strong>Master of Engineering Management</strong> (Data Science & Analytics concentration, 3.84 GPA) at NC State, I bring a rare combination of technical depth and business acumen. I architect end-to-end data solutions that stakeholders understand and trust — whether that's supply chain forecasting, KPI dashboards, or GPU infrastructure cost modeling.
+        Currently completing my <strong>Master of Engineering Management</strong> (Data Science & Analytics concentration, 3.84 GPA) at NC State, I bring a rare combination of technical depth and busi[...]
       </p>
       <p>
         Beyond the data, I'm passionate about mentoring, continuous learning, and finding the signal in the noise — whether that's in a supply chain dataset or a performance KPI.
@@ -502,7 +503,7 @@
       <div class="tl-role">Business Analyst</div>
       <div class="tl-company">☁️ Cloud Pharmaceuticals</div>
       <div class="tl-desc">
-        Built GPU infrastructure budgets and scenario-based cost models comparing A100/H100/B100-class configurations. Drove a 15% reduction in projected infrastructure costs through cost-performance trade-off analysis and vendor consolidation. Created executive-ready dashboards tracking compute utilization, power consumption, and ROI across AI workloads.
+        Built GPU infrastructure budgets and scenario-based cost models comparing A100/H100/B100-class configurations. Drove a 15% reduction in projected infrastructure costs through cost-performance [...]
       </div>
       <div class="tl-tags">
         <span class="tag">BRD/FRD</span>
@@ -532,7 +533,7 @@
       <div class="tl-role">Supply Chain Data Analyst Intern</div>
       <div class="tl-company">🚛 Volvo Group</div>
       <div class="tl-desc">
-        Built demand forecasting pipelines using Python and SQL with ANN/LSTM models, improving forecast accuracy by 60%. Delivered Power BI exception dashboards that reduced stockouts by 80% across hub locations. Standardized 500K supply chain records, improving data quality and reducing false KPI exceptions by 30%.
+        Built demand forecasting pipelines using Python and SQL with ANN/LSTM models, improving forecast accuracy by 60%. Delivered Power BI exception dashboards that reduced stockouts by 80% across h[...]
       </div>
       <div class="tl-tags">
         <span class="tag">Python</span>
@@ -549,7 +550,7 @@
       <div class="tl-role">Business Intelligence Analyst</div>
       <div class="tl-company">💼 Accenture</div>
       <div class="tl-desc">
-        Delivered stakeholder-ready Power BI dashboards with DAX, SSIS ETL pipelines, and automated SSRS reporting. Built Power Automate monitoring that raised pipeline uptime to 97%. Reduced production incidents by 60% through root-cause analysis and incident pattern triage. Managed 200+ defect resolutions and security remediation across multiple workstreams.
+        Delivered stakeholder-ready Power BI dashboards with DAX, SSIS ETL pipelines, and automated SSRS reporting. Built Power Automate monitoring that raised pipeline uptime to 97%. Reduced producti[...]
       </div>
       <div class="tl-tags">
         <span class="tag">Power BI</span>
@@ -591,7 +592,7 @@
       </div>
       <div class="project-title">Demand Forecasting Pipeline — Volvo Group</div>
       <div class="project-desc">
-        Built an end-to-end forecasting pipeline in Python and SQL with seasonality, lag, and rolling-window features. Used ANN and LSTM models to surface demand signals. Integrated outputs into Power BI exception dashboards for real-time anomaly detection.
+        Built an end-to-end forecasting pipeline in Python and SQL with seasonality, lag, and rolling-window features. Used ANN and LSTM models to surface demand signals. Integrated outputs into Power[...]
       </div>
       <div class="project-result">60% Forecast Accuracy Improvement · 80% Stockout Reduction</div>
     </div>
@@ -602,7 +603,7 @@
       </div>
       <div class="project-title">BI Platform & Pipeline Automation — Accenture</div>
       <div class="project-desc">
-        Designed and maintained Power BI dashboards with DAX measures, drill-downs, and automated refresh. Built Power Automate monitoring to auto-create defects on pipeline failures, raising uptime to 97%. Reduced manual intervention by 80% through intelligent alerting.
+        Designed and maintained Power BI dashboards with DAX measures, drill-downs, and automated refresh. Built Power Automate monitoring to auto-create defects on pipeline failures, raising uptime t[...]
       </div>
       <div class="project-result">97% Pipeline Uptime · $1.5M Annual Client Savings</div>
     </div>
@@ -613,7 +614,7 @@
       </div>
       <div class="project-title">Incident Management & Release Operations — Accenture</div>
       <div class="project-desc">
-        Reduced production disruption by 60% through incident pattern analysis, SQL/log-based root-cause triage, and structured UAT planning. Managed change requests across multiple workstreams using Azure DevOps and JIRA with full release traceability.
+        Reduced production disruption by 60% through incident pattern analysis, SQL/log-based root-cause triage, and structured UAT planning. Managed change requests across multiple workstreams using [...]
       </div>
       <div class="project-result">60% Reduction in Production Disruption</div>
     </div>
@@ -624,7 +625,7 @@
       </div>
       <div class="project-title">GPU Infrastructure Budget Model — Cloud Pharmaceuticals</div>
       <div class="project-desc">
-        Built a comprehensive cost-benefit model covering compute, storage, power, and cooling for GPU infrastructure. Consolidated vendor quotes across A100/H100/B100-class options into executive-ready Power BI dashboards comparing total cost of ownership.
+        Built a comprehensive cost-benefit model covering compute, storage, power, and cooling for GPU infrastructure. Consolidated vendor quotes across A100/H100/B100-class options into executive-rea[...]
       </div>
       <div class="project-result">15% Reduction in Projected Infrastructure Costs</div>
     </div>
@@ -635,7 +636,7 @@
       </div>
       <div class="project-title">Supply Chain Data Standardization — Volvo Group</div>
       <div class="project-desc">
-        Standardized and validated a 500K-record supply chain dataset using R, implementing validation checks and transformation logic. Improved data quality by 30%, reducing false exceptions in KPI dashboards and improving forecast reliability.
+        Standardized and validated a 500K-record supply chain dataset using R, implementing validation checks and transformation logic. Improved data quality by 30%, reducing false exceptions in KPI d[...]
       </div>
       <div class="project-result">30% Data Quality Improvement · 500K+ Records Validated</div>
     </div>
@@ -646,7 +647,7 @@
       </div>
       <div class="project-title">API Integration & Security Remediation — Accenture</div>
       <div class="project-desc">
-        Integrated and tested REST APIs using OAuth token-based authentication. Remediated SonarQube security findings including SQL injection risks, executed DAST testing, and validated fixes to prevent regression across multiple deployments.
+        Integrated and tested REST APIs using OAuth token-based authentication. Remediated SonarQube security findings including SQL injection risks, executed DAST testing, and validated fixes to prev[...]
       </div>
       <div class="project-result">200+ Defects Resolved · Security Posture Strengthened</div>
     </div>
